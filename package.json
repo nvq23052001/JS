@@ -18,5 +18,8 @@
   "main": "main.js",
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "navigo": "^8.11.1"
+  }
 }
