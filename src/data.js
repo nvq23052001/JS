@@ -2,19 +2,22 @@ const data = [
   {
     id: 1,
     title: "Noi dung 1",
-    description: "adasdasdasdsadasdsadsadsa",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum doloremque veritatis magnam omnis, facere rem labore assumenda praesentium mollitia ipsa nam voluptates recusandae",
     img: "https://picsum.photos/300/300",
   },
   {
     id: 2,
     title: "Noi dung 2",
-    description: "adasdasdasdsadasdsadsadsa",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum doloremque veritatis magnam omnis, facere rem labore assumenda praesentium mollitia ipsa nam voluptates recusandae",
     img: "https://picsum.photos/300/300",
   },
   {
     id: 3,
     title: "Noi dung 3",
-    description: "adasdasdasdsadasdsadsadsa",
+    ddescription:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum doloremque veritatis magnam omnis, facere rem labore assumenda praesentium mollitia ipsa nam voluptates recusandae",
     img: "https://picsum.photos/300/300",
   },
 ];

@@ -15,10 +15,10 @@ const HomePage = {
             return `<div class="news__item p-2 border border-gray-400">
           <img src="${item.img}" alt="" class="news__item-img">
           <h3 class="heading-3 text-lg text-orange-600">
-            Vinh danh 295 Fpoly học kỳ Spring 2018
+            ${item.title}
           </h3>
-          <p class="news__item-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum doloremque
-            veritatis magnam omnis, facere rem labore assumenda praesentium mollitia ipsa nam voluptates recusandae,
+          <p class="news__item-p">
+          ${item.description}
           </p>
         </div>`;
           })
