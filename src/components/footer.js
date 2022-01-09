@@ -1,6 +1,6 @@
 const Footer = {
   print() {
-    return `Footer`;
+    return `<p>Nguyễn Văn Quyết</p>`;
   },
 };
 
