@@ -3,7 +3,7 @@ const data = [
     id: 1,
     title: "Noi dung 1",
     description: "adasdasdasdsadasdsadsadsa",
-    img: "./img/hotel-1.jpg",
+    img: "../img/hotel-1.jpg",
   },
   {
     id: 2,
