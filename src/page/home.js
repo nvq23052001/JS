@@ -1,7 +1,7 @@
 import data from "../data";
 
 const HomePage = {
-  print() {
+  render() {
     return `
     <div class="banner ">
         <img src="./img/nat-10.jpg" alt="" class="banner__img h-80 w-full object-cover mt-3">
@@ -13,9 +13,13 @@ const HomePage = {
         ${data
           .map((item) => {
             return `<div class="news__item p-2 border border-gray-400">
-          <img src="${item.img}" alt="" class="news__item-img">
+          <a href='/news/${item.id}'>
+            <img src="${item.img}" alt="" class="news__item-img">
+          </a>
           <h3 class="heading-3 text-lg text-orange-600">
+            <a href='/news/${item.id}'>
             ${item.title}
+            </a>
           </h3>
           <p class="news__item-p">
           ${item.description}

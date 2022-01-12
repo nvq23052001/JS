@@ -1,5 +1,5 @@
 const About = {
-  print() {
+  render() {
     return `<h1>About page</h1>`;
   },
 };
