@@ -1,5 +1,4 @@
-import data from "../data";
-
+import data, { act } from "../data";
 const HomePage = {
   render() {
     return `
@@ -30,35 +29,25 @@ const HomePage = {
       </div>
     </div>
     <div class="news">
-      <h2 class="heading-2 text-xl py-5">Tin tức học tập</h2>
+      <h2 class="heading-2 text-xl py-5">Hoạt động sinh viên</h2>
       <div class="news__des grid grid-cols-3 gap-8">
-        <div class="news__item p-2 border border-gray-400">
-          <img src="./img/hotel-1.jpg" alt="" class="news__item-img">
-          <h3 class="heading-3 text-lg text-orange-600">
-            Vinh danh 295 Fpoly học kỳ Spring 2018
-          </h3>
-          <p class="news__item-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum doloremque
-            veritatis magnam omnis, facere rem labore assumenda praesentium mollitia ipsa nam voluptates recusandae,
-          </p>
-        </div>
-        <div class="news__item p-2 border border-gray-400">
-          <img src="./img/hotel-1.jpg" alt="" class="news__item-img">
-          <h3 class="heading-3 text-lg text-orange-600">
-            Vinh danh 295 Fpoly học kỳ Spring 2018
-          </h3>
-          <p class="news__item-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum doloremque
-            veritatis magnam omnis, facere rem labore assumenda praesentium mollitia ipsa nam voluptates recusandae,
-          </p>
-        </div>
-        <div class="news__item p-2 border border-gray-400">
-          <img src="./img/hotel-1.jpg" alt="" class="news__item-img">
-          <h3 class="heading-3 text-lg text-orange-600">
-            Vinh danh 295 Fpoly học kỳ Spring 2018
-          </h3>
-          <p class="news__item-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum doloremque
-            veritatis magnam omnis, facere rem labore assumenda praesentium mollitia ipsa nam voluptates recusandae,
-          </p>
-        </div>
+      ${act
+        .map((item) => {
+          return `<div class="news__item p-2 border border-gray-400">
+        <a href='/news/${item.id}'>
+          <img src="${item.img}" alt="" class="news__item-img">
+        </a>
+        <h3 class="heading-3 text-lg text-orange-600">
+          <a href='/news/${item.id}'>
+          ${item.title}
+          </a>
+        </h3>
+        <p class="news__item-p">
+        ${item.description}
+        </p>
+      </div>`;
+        })
+        .join("")}
       </div>
     </div>
   </div>
