@@ -58,16 +58,6 @@ export const listMenu = [
     href: "/chuong-trinh-dao-tao",
     name: "Chương trình đào tạo",
   },
-  {
-    id: "4",
-    href: "/goc-sinh-vien",
-    name: "Góc sinh viên",
-  },
-  {
-    id: "4",
-    href: "/tuyen-dung",
-    name: "Tuyển dụng",
-  },
 ];
 
 export default data;

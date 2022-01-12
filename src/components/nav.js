@@ -13,6 +13,10 @@ const Nav = {
           <input type="text" class="nav__ip">
           <button class="nav__btn border bg-slate-400">Tìm kiếm</button>
         </form>
+        <div class="nav__navigation">
+        <a href="/sign-up" class="nav__link text-white px-4 py-2">Sign up</a>
+        <a href="/sign-in" class="nav__link text-white px-4 py-2">Sign in</a>
+        </div>
       </nav>`;
   },
 };
