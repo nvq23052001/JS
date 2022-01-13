@@ -9,37 +9,49 @@ import Nav from "./components/nav";
 import SignUp from "./page/signUp";
 import SignIn from "./page/signIn";
 
+import HeaderAdmin from "./components/header_admin";
+import Dashboard from "./components/dashboard";
+
 const router = new Navigo("/", { linksSelector: "a" });
 
-const print = (data) => {
-  document.getElementById("header").innerHTML = Header.render();
-  document.getElementById("nav").innerHTML = Nav.render();
-  document.getElementById("app").innerHTML = data;
-  document.getElementById("footer").innerHTML = Footer.render();
+const print = (content, header, nav, footer) => {
+  document.getElementById("header").innerHTML = header;
+  document.getElementById("nav").innerHTML = nav;
+  document.getElementById("app").innerHTML = content;
+  document.getElementById("footer").innerHTML = footer;
 };
 
-const layout = (data) => {
-  document.getElementById("header").innerHTML = Header.render();
-  document.getElementById("nav").innerHTML = "";
-  document.getElementById("app").innerHTML = data;
+const layout = (content, header) => {
+  document.getElementById("header__admin").innerHTML = header;
+  document.getElementById("app__admin").innerHTML = content;
 };
 
 router.on({
   "/": () => {
-    print(HomePage.render());
+    print(HomePage.render(), Header.render(), Nav.render(), Footer.render());
   },
   "/about": () => {
-    print(About.render());
+    print(About.render(), Header.render(), Nav.render(), Footer.render());
   },
   "/news/:id": ({ data }) => {
     const { id } = data;
-    print(NewsDetail.render(id));
+    print(
+      NewsDetail.render(id),
+      Header.render(),
+      Nav.render(),
+      Footer.render()
+    );
   },
   "/sign-up": () => {
-    layout(SignUp.render());
+    print(SignUp.render(), Header.render(), Nav.render(), Footer.render());
   },
   "/sign-in": () => {
-    layout(SignIn.render());
+    print(SignIn.render(), Header.render(), Nav.render(), Footer.render());
+  },
+  "/admin": () => {
+    print(null, null, null, null);
+
+    layout(Dashboard.render(), HeaderAdmin.render());
   },
 });
 

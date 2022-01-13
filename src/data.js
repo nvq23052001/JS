@@ -2,8 +2,7 @@ const data = [
   {
     id: "1",
     title: "Noi dung 1",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum doloremque veritatis magnam omnis, facere rem labore assumenda praesentium mollitia ipsa nam voluptates recusandae",
+    description: "Mô tả 1",
     img: "https://picsum.photos/300/300",
   },
   {
