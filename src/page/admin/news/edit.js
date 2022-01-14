@@ -6,6 +6,7 @@ const EditNew = {
   render(id) {
     const newFind = data.find((item) => item.id === id);
     console.log(newFind);
+    console.log(newFind.title);
     return /* html */ `
             ${HeaderAdmin.render()}
             <main class="app__admin flex flex-col md:flex-row">
@@ -29,9 +30,9 @@ const EditNew = {
                               Title
                           </label>
                           <div class="mt-1 flex rounded-md shadow-sm">
-                              <input value=${
+                              <input value='${
                                 newFind.title
-                              } type="text" name="title" id="title" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Title">
+                              }' type="text" name="title" id="title" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Title">
                           </div>
                           </div>
                       </div>
@@ -41,9 +42,9 @@ const EditNew = {
                           Description
                           </label>
                           <div class="mt-1">
-                          <textarea id="description" value=${
+                          <textarea id="description" name="description" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Description">${
                             newFind.description
-                          } name="description" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Description"></textarea>
+                          }</textarea>
                           </div>
                       </div>
           
@@ -58,7 +59,7 @@ const EditNew = {
                               </div>
                               <div class="flex text-sm text-gray-600">
                                   <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                                      <span>Upload a file</span>
+                                      <span>Change a file</span>
                                       <input id="file-upload" name="file-upload" type="file" class="sr-only">
                                   </label>
                                   <p class="pl-1">or drag and drop</p>

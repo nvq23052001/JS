@@ -16,6 +16,7 @@ const Nav = {
         <div class="nav__navigation">
         <a href="/sign-up" class="nav__link text-white px-4 py-2">Sign up</a>
         <a href="/sign-in" class="nav__link text-white px-4 py-2">Sign in</a>
+        <a href="/admin/dashboard" class="nav__link text-white px-4 py-2">Admin</a>
         </div>
       </nav>`;
   },

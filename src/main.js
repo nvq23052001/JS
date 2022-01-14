@@ -59,7 +59,6 @@ router.on({
   },
   "/admin/news/:id/edit": ({ data }) => {
     const { id } = data;
-    console.log(id);
     print(EditNew.render(id));
   },
 });
