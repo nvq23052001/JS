@@ -1,6 +1,14 @@
+import Header from "../components/header";
+import Footer from "../components/footer";
+import Nav from "../components/nav";
 const SignIn = {
   render() {
-    return `<div class="bg-slate-100 min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    return `
+    <div class=' max-w-7xl mx-auto text-sm'>
+
+    ${Header.render()}
+    ${Nav.render()} 
+    <div class="bg-slate-100 min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
               <div class=" max-w-md w-full space-y-8">
                 <div>
                   <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -48,6 +56,8 @@ const SignIn = {
                   </div>
                 </form>
               </div>
+    </div>
+    ${Footer.render()}
     </div>`;
   },
 };

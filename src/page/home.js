@@ -1,7 +1,13 @@
+import Header from "../components/header";
+import Footer from "../components/footer";
+import Nav from "../components/nav";
 import data, { act } from "../data";
 const HomePage = {
   render() {
     return `
+    <div class=' max-w-7xl mx-auto text-sm'>
+    ${Header.render()}
+    ${Nav.render()}
     <div class="banner ">
         <img src="./img/nat-10.jpg" alt="" class="banner__img h-80 w-full object-cover mt-3">
     </div>
@@ -13,7 +19,7 @@ const HomePage = {
           .map((item) => {
             return `<div class="news__item p-2 border border-gray-400">
           <a href='/news/${item.id}'>
-            <img src="${item.img}" alt="" class="news__item-img">
+            <img src="${item.img}" alt="" class="news__item-img w-full  ">
           </a>
           <h3 class="heading-3 text-lg text-orange-600">
             <a href='/news/${item.id}'>
@@ -35,7 +41,7 @@ const HomePage = {
         .map((item) => {
           return `<div class="news__item p-2 border border-gray-400">
         <a href='/news/${item.id}'>
-          <img src="${item.img}" alt="" class="news__item-img">
+          <img src="${item.img}" alt="" class="news__item-img w-full">
         </a>
         <h3 class="heading-3 text-lg text-orange-600">
           <a href='/news/${item.id}'>
@@ -50,6 +56,8 @@ const HomePage = {
         .join("")}
       </div>
     </div>
+  </div>
+  ${Footer.render()}
   </div>
     `;
   },

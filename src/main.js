@@ -9,26 +9,26 @@ import Nav from "./components/nav";
 import SignUp from "./page/signUp";
 import SignIn from "./page/signIn";
 
-import HeaderAdmin from "./components/header_admin";
-import Dashboard from "./components/dashboard";
+import DashBoard from "./page/admin/dashboard";
+import News from "./page/admin/news";
+import AddNews from "./page/admin/news/add";
+import EditNew from "./page/admin/news/edit";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
-const print = (content, header, nav, footer) => {
-  document.getElementById("header").innerHTML = header;
-  document.getElementById("nav").innerHTML = nav;
+const print = (content) => {
   document.getElementById("app").innerHTML = content;
-  document.getElementById("footer").innerHTML = footer;
 };
 
-const layout = (content, header) => {
+const layout = (content, nav, header) => {
   document.getElementById("header__admin").innerHTML = header;
-  document.getElementById("app__admin").innerHTML = content;
+  document.getElementById("nav__admin").innerHTML = nav;
+  document.getElementById("content__admin").innerHTML = content;
 };
 
 router.on({
   "/": () => {
-    print(HomePage.render(), Header.render(), Nav.render(), Footer.render());
+    print(HomePage.render());
   },
   "/about": () => {
     print(About.render(), Header.render(), Nav.render(), Footer.render());
@@ -43,15 +43,24 @@ router.on({
     );
   },
   "/sign-up": () => {
-    print(SignUp.render(), Header.render(), Nav.render(), Footer.render());
+    print(SignUp.render());
   },
   "/sign-in": () => {
-    print(SignIn.render(), Header.render(), Nav.render(), Footer.render());
+    print(SignIn.render());
   },
-  "/admin": () => {
-    print(null, null, null, null);
-
-    layout(Dashboard.render(), HeaderAdmin.render());
+  "/admin/dashboard": () => {
+    print(DashBoard.render());
+  },
+  "/admin/news": () => {
+    print(News.render());
+  },
+  "/admin/news/add": () => {
+    print(AddNews.render());
+  },
+  "/admin/news/:id/edit": ({ data }) => {
+    const { id } = data;
+    console.log(id);
+    print(EditNew.render(id));
   },
 });
 
