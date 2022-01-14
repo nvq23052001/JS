@@ -5,7 +5,7 @@ const HeaderAdmin = {
         <div class="flex flex-wrap items-center">
             <div class="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
                 <a href="#" aria-label="Home">
-                    <span class="text-xl pl-2"><i class="em em-grinning"></i></span>
+                    <span class="text-xl pl-2"><i class="em em-grinning"></i></span>    
                 </a>
             </div>
 
