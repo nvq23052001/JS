@@ -4,7 +4,13 @@ import Nav from "../components/nav";
 import data, { act } from "../data";
 const HomePage = {
   render() {
-    return `
+    return fetch("https://61e83c5be32cd90017acc156.mockapi.io/post")
+      .then((respond) => {
+        const data = respond.json();
+        return data;
+      })
+      .then((data) => {
+        return `
     <div class=' max-w-7xl mx-auto text-sm'>
     ${Header.render()}
     ${Nav.render()}
@@ -27,39 +33,18 @@ const HomePage = {
             </a>
           </h3>
           <p class="news__item-p">
-          ${item.description}
+          ${item.desc}
           </p>
         </div>`;
           })
           .join("")}
       </div>
     </div>
-    <div class="news">
-      <h2 class="heading-2 text-xl py-5">Hoạt động sinh viên</h2>
-      <div class="news__des grid grid-cols-3 gap-8">
-      ${act
-        .map((item) => {
-          return `<div class="news__item p-2 border border-gray-400">
-        <a href='/news/${item.id}'>
-          <img src="${item.img}" alt="" class="news__item-img w-full">
-        </a>
-        <h3 class="heading-3 text-lg text-orange-600">
-          <a href='/news/${item.id}'>
-          ${item.title}
-          </a>
-        </h3>
-        <p class="news__item-p">
-        ${item.description}
-        </p>
-      </div>`;
-        })
-        .join("")}
-      </div>
-    </div>
   </div>
   ${Footer.render()}
   </div>
     `;
+      });
   },
 };
 
