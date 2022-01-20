@@ -11,6 +11,10 @@
     {
       "src": "/admin/dashboard",
       "dest": "/"
+    },
+    {
+      "src": "/admin/news/:id",
+      "dest": "/"
     }
   ]
 }

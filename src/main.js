@@ -48,11 +48,7 @@ router.on({
   },
   "/admin/news/:id/edit": ({ data }) => {
     const { id } = data;
-<<<<<<< HEAD
-    print(EditNew.render(id));
-=======
     print(EditNew, id);
->>>>>>> lap
   },
 });
 
