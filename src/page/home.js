@@ -1,16 +1,16 @@
+import axios from "axios";
+
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Nav from "../components/nav";
 import data, { act } from "../data";
 const HomePage = {
-  render() {
-    return fetch("https://61e83c5be32cd90017acc156.mockapi.io/post")
-      .then((respond) => {
-        const data = respond.json();
-        return data;
-      })
-      .then((data) => {
-        return `
+  async render() {
+    const { data } = await axios.get(
+      "https://61e83c5be32cd90017acc156.mockapi.io/post"
+    );
+    console.log(data);
+    return `
     <div class=' max-w-7xl mx-auto text-sm'>
     ${Header.render()}
     ${Nav.render()}
@@ -44,7 +44,6 @@ const HomePage = {
   ${Footer.render()}
   </div>
     `;
-      });
   },
 };
 

@@ -43,7 +43,7 @@ router.on({
   "/admin/news": () => {
     print(News);
   },
-  "/admin/news/add": () => {
+  "admin/news/add": () => {
     print(AddNews);
   },
   "/admin/news/:id/edit": ({ data }) => {

@@ -14,7 +14,7 @@ const News = {
             <div class="bg-gray-800 pt-3">
                 <div class="flex items-center justify-between rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
                     <h1 class="font-bold pl-2">NEWS</h1>
-                    <a href="admin/news/add" class="btn bg-white-800 rounded border py-2 px-3.5">
+                    <a href="/admin/news/add" class="btn bg-white-800 rounded border py-2 px-3.5">
                         Add
                     </a>
                 </div>
@@ -65,7 +65,7 @@ const News = {
                                             <img class="h-10 w-10 rounded-full" src="${item.img}" alt="">
                                             </td>
                                             <td scope="col" class="relative px-6 py-3">
-                                                <a class=" rounded border py-2 px-3.5" href="admin/news/${item.id}/edit">Edit</a>
+                                                <a class=" rounded border py-2 px-3.5" href="/admin/news/${item.id}/edit">Edit</a>
                                             </td>
                                             <td scope="col" class="relative px-6 py-3">
                                                 <a class=" rounded border py-2 px-3.5"  href="">Delete</a>
