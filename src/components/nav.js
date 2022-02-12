@@ -1,4 +1,5 @@
 import { listMenu } from "../data";
+import { reRender } from "../utils/rerender";
 const Nav = {
   render() {
     return ` <nav class="nav flex justify-between bg-orange-500 items-center">
@@ -14,11 +15,30 @@ const Nav = {
           <button class="nav__btn border bg-slate-400">Tìm kiếm</button>
         </form>
         <div class="nav__navigation">
-        <a href="/sign-up" class="nav__link text-white px-4 py-2">Sign up</a>
-        <a href="/sign-in" class="nav__link text-white px-4 py-2">Sign in</a>
-        <a href="/admin/dashboard" class="nav__link text-white px-4 py-2">Admin</a>
+        ${
+          !JSON.parse(localStorage.getItem("user"))
+            ? `<a href="/signup" class="nav__link text-white px-4 py-2">Sign up</a>
+        <a href="/signin" class="nav__link text-white px-4 py-2">Sign in</a>`
+            : `<div class="nav__link text-white px-4 py-2" id='user-name'>quyetnv</div>
+        <button href="/admin/dashboard" id='logout' class="nav__link text-white px-4 py-2">Logout</button>`
+        }
+          
+          
         </div>
       </nav>`;
+  },
+  afterRender() {
+    const userName = document.querySelector("#user-name");
+    const logout = document.querySelector("#logout");
+    if (userName) {
+      userName.innerHTML = JSON.parse(localStorage.getItem("user")).username;
+    }
+    if (logout) {
+      logout.addEventListener("click", () => {
+        localStorage.removeItem("user");
+        reRender(Nav, ".nav");
+      });
+    }
   },
 };
 

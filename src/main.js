@@ -18,7 +18,29 @@ const router = new Navigo("/", { linksSelector: "a" });
 
 const print = async (content, id) => {
   document.getElementById("app").innerHTML = await content.render(id);
+  if (content.afterRender) content.afterRender(id);
 };
+
+router.on(
+  "/admin/*/",
+  () => {
+    console.log("truy cap duong dan admon");
+  },
+  {
+    before(done, math) {
+      if (localStorage.getItem("user")) {
+        const userId = JSON.parse(localStorage.getItem("user")).id;
+        if (userId === 1) {
+          done();
+        } else {
+          document.location.href = "/";
+        }
+      } else {
+        document.location.href = "/";
+      }
+    },
+  }
+);
 
 router.on({
   "/": () => {
@@ -31,10 +53,10 @@ router.on({
     const { id } = data;
     print(NewsDetail, id);
   },
-  "/sign-up": () => {
+  "/signup": () => {
     print(SignUp);
   },
-  "/sign-in": () => {
+  "/signin": () => {
     print(SignIn);
   },
   "/admin/dashboard": () => {

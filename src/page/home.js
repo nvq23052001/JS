@@ -1,4 +1,4 @@
-import axios from "axios";
+import { getAll } from "../api/post";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -6,10 +6,7 @@ import Nav from "../components/nav";
 import data, { act } from "../data";
 const HomePage = {
   async render() {
-    const { data } = await axios.get(
-      "https://61e83c5be32cd90017acc156.mockapi.io/post"
-    );
-    console.log(data);
+    const { data } = await getAll();
     return `
     <div class=' max-w-7xl mx-auto text-sm'>
     ${Header.render()}
@@ -44,6 +41,9 @@ const HomePage = {
   ${Footer.render()}
   </div>
     `;
+  },
+  afterRender() {
+    Nav.afterRender();
   },
 };
 

@@ -4,13 +4,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start:server": "json-server db.json -m ./node_modules/json-server-auth --port 3001",
+    "tailwind:watch": "tailwindcss -i style.css -o build/tailwind.css --watch"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.1",
     "eslint": "^8.6.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
+    "json-server": "^0.17.0",
+    "json-server-auth": "^2.1.0",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.10",
     "vite": "^2.7.2"
@@ -21,6 +25,7 @@
   "description": "",
   "dependencies": {
     "axios": "^0.25.0",
-    "navigo": "^8.11.1"
+    "navigo": "^8.11.1",
+    "toastr": "^2.1.4"
   }
 }

@@ -1,14 +1,11 @@
-import axios from "axios";
+import { get } from "../api/post";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Nav from "../components/nav";
 const NewsDetail = {
   async render(id) {
-    const { data } = await axios.get(
-      `https://61e83c5be32cd90017acc156.mockapi.io/post/${id}`
-    );
-    console.log(data);
+    const { data } = await get(id);
     return `<div class=' max-w-7xl mx-auto text-sm'>
           ${Header.render()}
          ${Nav.render()} 
