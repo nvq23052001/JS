@@ -6,4 +6,46 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* font-family: 'Prompt', sans-serif; */
+    font-family: proxima-nova, sans-serif;
+    /* font-family: miller-display, serif; */
+}
+
+.banner {
+
+    background-image: linear-gradient(to right bottom,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)), url('./img/header1.jpg');
+    height: calc(100vh - 111px);
+}
+
+.header__item {
+    transition: all 0.5s;
+}
+
+.header__item:hover {
+    border-bottom: 1px solid #000;
+}
+
+.banner__text {
+    font-family: miller-display, serif;
+    font-weight: 300;
+    font-size: 55px;
+}
+
+.btn {
+    font-weight: 400;
+    border: 1px solid #ffff;
+    padding: 18px 50px;
+    text-transform: uppercase;
+}
+
+.banner__link {
+    background-image: transparent;
+    background-clip: text;
+}
+
+.home__name-link {
+    font-family: miller-display, serif;
+
 }

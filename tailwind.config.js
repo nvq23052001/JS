@@ -4,6 +4,9 @@ module.exports = {
   purge: ["./**/*.html", "*.html", "./src/**/*.{html,js}"],
   theme: {
     extend: {},
+    fontFamily: {
+      miller: ["miller-display", "sans-serif"],
+    },
   },
 
   plugins: [],

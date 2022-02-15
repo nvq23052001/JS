@@ -9,6 +9,9 @@ import Nav from "./components/nav";
 import SignUp from "./page/signUp";
 import SignIn from "./page/signIn";
 
+import ProductsPage from "./page/products/index";
+import DetailProduct from "./page/products/detail";
+
 import DashBoard from "./page/admin/dashboard";
 import News from "./page/admin/news";
 import AddNews from "./page/admin/news/add";
@@ -52,6 +55,13 @@ router.on({
   "/news/:id": ({ data }) => {
     const { id } = data;
     print(NewsDetail, id);
+  },
+  "/products": () => {
+    print(ProductsPage);
+  },
+  "/product/:id": ({ data }) => {
+    const { id } = data;
+    print(DetailProduct, id);
   },
   "/signup": () => {
     print(SignUp);

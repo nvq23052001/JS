@@ -62,5 +62,21 @@
       "username": "member1123",
       "id": 6
     }
+  ],
+  "products": [
+    {
+      "name": "Dynamic Data Producer",
+      "desc": "Quia ea officia sapiente quis. Nostrum sit omnis sed et enim. Occaecati distinctio possimus cupiditate consequatur. Illo occaecati dolorum et ex ut qui ipsum.\n \rUt ea cum eligendi. Sit laudantium dolore quia ut fuga quis. Alias occaecati incidunt at saepe a.\n \rVoluptatum eum culpa dolores adipisci. Incidunt consequuntur quo officia explicabo enim. Quis nobis repellendus aut. Et qui vel voluptas qui. Corrupti iusto dolorum sit magni ut occaecati sit. Quo ullam ut et suscipit consequuntur ut iste quibusdam saepe.",
+      "img": "http://placeimg.com/640/480/nature",
+      "price": 2000,
+      "id": "1"
+    },
+    {
+      "name": "Dynamic Data Producer",
+      "desc": "Quia ea officia sapiente quis. Nostrum sit omnis sed et enim. Occaecati distinctio possimus cupiditate consequatur. Illo occaecati dolorum et ex ut qui ipsum.\n \rUt ea cum eligendi. Sit laudantium dolore quia ut fuga quis. Alias occaecati incidunt at saepe a.\n \rVoluptatum eum culpa dolores adipisci. Incidunt consequuntur quo officia explicabo enim. Quis nobis repellendus aut. Et qui vel voluptas qui. Corrupti iusto dolorum sit magni ut occaecati sit. Quo ullam ut et suscipit consequuntur ut iste quibusdam saepe.",
+      "img": "http://placeimg.com/640/480/nature",
+      "price": 3000,
+      "id": "2"
+    }
   ]
 }
