@@ -9,6 +9,9 @@ import Nav from "./components/nav";
 import SignUp from "./page/signUp";
 import SignIn from "./page/signIn";
 
+import ProductsPage from "./page/products/index";
+import DetailProduct from "./page/products/detail";
+
 import DashBoard from "./page/admin/dashboard";
 import News from "./page/admin/news";
 import AddNews from "./page/admin/news/add";
@@ -18,7 +21,29 @@ const router = new Navigo("/", { linksSelector: "a" });
 
 const print = async (content, id) => {
   document.getElementById("app").innerHTML = await content.render(id);
+  if (content.afterRender) content.afterRender(id);
 };
+
+router.on(
+  "/admin/*/",
+  () => {
+    console.log("truy cap duong dan admon");
+  },
+  {
+    before(done, math) {
+      if (localStorage.getItem("user")) {
+        const userId = JSON.parse(localStorage.getItem("user")).id;
+        if (userId === 1) {
+          done();
+        } else {
+          document.location.href = "/";
+        }
+      } else {
+        document.location.href = "/";
+      }
+    },
+  }
+);
 
 router.on({
   "/": () => {
@@ -31,10 +56,17 @@ router.on({
     const { id } = data;
     print(NewsDetail, id);
   },
-  "/sign-up": () => {
+  "/products": () => {
+    print(ProductsPage);
+  },
+  "/product/:id": ({ data }) => {
+    const { id } = data;
+    print(DetailProduct, id);
+  },
+  "/signup": () => {
     print(SignUp);
   },
-  "/sign-in": () => {
+  "/signin": () => {
     print(SignIn);
   },
   "/admin/dashboard": () => {

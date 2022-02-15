@@ -1,12 +1,14 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Nav from "../components/nav";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
+
+import { signin } from "../api/user";
 const SignIn = {
   render() {
     return `
     <div class=' max-w-7xl mx-auto text-sm'>
-
-    ${Header.render()}
     ${Nav.render()} 
     <div class="bg-slate-100 min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
               <div class=" max-w-md w-full space-y-8">
@@ -15,7 +17,7 @@ const SignIn = {
                     Sign in to your account
                   </h2>
                 </div>
-                <form class="mt-8 space-y-6" action="#" method="POST">
+                <form id="form" class="mt-8 space-y-6" action="#" method="POST">
                   <input type="hidden" name="remember" value="true">
                   <div class="rounded-md shadow-sm -space-y-px">
                     <div class='pb-10'>
@@ -59,6 +61,29 @@ const SignIn = {
     </div>
     ${Footer.render()}
     </div>`;
+  },
+
+  afterRender() {
+    document.querySelector("#form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      try {
+        const { data } = await signin({
+          email: document.querySelector("#email-address").value,
+          password: document.querySelector("#password").value,
+        });
+        localStorage.setItem("user", JSON.stringify(data.user));
+
+        toastr.success("Đăng nhập thành công, chuyển trang sau 2s");
+        setTimeout(() => {
+          if (data.user.id === 1) {
+            document.location.href = "/#/admin/news";
+          } else document.location.href = "/#/";
+        }, 2000);
+      } catch (error) {
+        toastr.error(error.respond.data);
+        document.querySelector("#form").reset();
+      }
+    });
   },
 };
 

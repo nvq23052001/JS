@@ -1,0 +1,82 @@
+{
+  "post": [
+    {
+      "title": "Dynamic Data Producer",
+      "desc": "Quia ea officia sapiente quis. Nostrum sit omnis sed et enim. Occaecati distinctio possimus cupiditate consequatur. Illo occaecati dolorum et ex ut qui ipsum.\n \rUt ea cum eligendi. Sit laudantium dolore quia ut fuga quis. Alias occaecati incidunt at saepe a.\n \rVoluptatum eum culpa dolores adipisci. Incidunt consequuntur quo officia explicabo enim. Quis nobis repellendus aut. Et qui vel voluptas qui. Corrupti iusto dolorum sit magni ut occaecati sit. Quo ullam ut et suscipit consequuntur ut iste quibusdam saepe.",
+      "img": "http://placeimg.com/640/480/nature",
+      "id": "1"
+    },
+    {
+      "title": "test",
+      "desc": "test 1",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/4/4a/The_Old_Fortress_and_the_Old_Town_of_Corfu_-_September_2017.jpg",
+      "id": "uFhECor"
+    },
+    {
+      "title": "test",
+      "desc": "test 1",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/4/4a/The_Old_Fortress_and_the_Old_Town_of_Corfu_-_September_2017.jpg",
+      "id": "ZpUsKfR"
+    },
+    {
+      "title": "test 2",
+      "desc": "ádasdasdsa",
+      "img": "http://res.cloudinary.com/nvquyet/image/upload/v1644223370/fl4ugluzyw7095e11rib.jpg",
+      "id": "DJ69nSZ"
+    }
+  ],
+  "users": [
+    {
+      "email": "nvquyet23052001@gmail.com",
+      "password": "$2a$10$D0N98wNfVkPhDppQxkGl5.ID.B/Vyh0JLKv0WWCJ3oHRTiEsflwc.",
+      "username": "quyet",
+      "id": 1
+    },
+    {
+      "email": "test@123.com",
+      "password": "$2a$10$7L0WU0ZRUkZYgzQQN6.Of.0nb2ApnHs7wcHhiOXuiI6Ll3E9ULxSu",
+      "username": "nv",
+      "id": 2
+    },
+    {
+      "email": "test1@gmail.com",
+      "password": "$2a$10$9VZskzDNR2Sav3ljXYa0lOS6TWPAll3AG68rxFEhlKNxg1qIq97/a",
+      "username": "quyet",
+      "id": 3
+    },
+    {
+      "email": "member@gmail.com",
+      "password": "$2a$10$e1HXU.w92b1dI5oDM0N9KuaFiq/KWnUyjcYo3gK69R99JZxAegVO.",
+      "username": "quyetn",
+      "id": 4
+    },
+    {
+      "email": "member1@gmail.com",
+      "password": "$2a$10$Bb/Qcv7Qugd4KrIQw9fPTO6ro1E6rR85uyTGLg3CVsjBcjJYC48MK",
+      "username": "member",
+      "id": 5
+    },
+    {
+      "email": "member2@gmail.com",
+      "password": "$2a$10$MzuIoOSobBl6hy/8khrlg.VTXYdZrf/EhjBu4yNtI1RMrC5MLjB9G",
+      "username": "member1123",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "name": "Dynamic Data Producer",
+      "desc": "Quia ea officia sapiente quis. Nostrum sit omnis sed et enim. Occaecati distinctio possimus cupiditate consequatur. Illo occaecati dolorum et ex ut qui ipsum.\n \rUt ea cum eligendi. Sit laudantium dolore quia ut fuga quis. Alias occaecati incidunt at saepe a.\n \rVoluptatum eum culpa dolores adipisci. Incidunt consequuntur quo officia explicabo enim. Quis nobis repellendus aut. Et qui vel voluptas qui. Corrupti iusto dolorum sit magni ut occaecati sit. Quo ullam ut et suscipit consequuntur ut iste quibusdam saepe.",
+      "img": "http://placeimg.com/640/480/nature",
+      "price": 2000,
+      "id": "1"
+    },
+    {
+      "name": "Dynamic Data Producer",
+      "desc": "Quia ea officia sapiente quis. Nostrum sit omnis sed et enim. Occaecati distinctio possimus cupiditate consequatur. Illo occaecati dolorum et ex ut qui ipsum.\n \rUt ea cum eligendi. Sit laudantium dolore quia ut fuga quis. Alias occaecati incidunt at saepe a.\n \rVoluptatum eum culpa dolores adipisci. Incidunt consequuntur quo officia explicabo enim. Quis nobis repellendus aut. Et qui vel voluptas qui. Corrupti iusto dolorum sit magni ut occaecati sit. Quo ullam ut et suscipit consequuntur ut iste quibusdam saepe.",
+      "img": "http://placeimg.com/640/480/nature",
+      "price": 3000,
+      "id": "2"
+    }
+  ]
+}

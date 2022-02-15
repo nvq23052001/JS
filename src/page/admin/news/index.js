@@ -1,11 +1,13 @@
-import data from "../../../data";
+import { getAll, remove } from "../../../api/post";
+
 import HeaderAdmin from "../../../components/header_admin";
 import NavAdmin from "../../../components/nav_admin";
 const News = {
-  render() {
+  async render() {
+    const { data } = await getAll();
     return /* html */ `
     ${HeaderAdmin.render()}
-    <main class="app__admin flex flex-col md:flex-row">
+    <main class="app__admin shadow-xl bg-gray-800 flex flex-col md:flex-row">
     ${NavAdmin.render()}
     <div class="admin bg-gray-800 font-sans leading-normal tracking-normal mt-12 w-full">
             <section class='basis-full'>
@@ -49,31 +51,43 @@ const News = {
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
                                 ${data
-                                  .map((item) => {
+                                  .map((item, index) => {
                                     return `
                                         <tr>
                                             <td class="px-6 py-4 whitespace-nowrap">
-                                                <div class="text-sm text-gray-500">${item.id}</div>
+                                                <div class="text-sm text-gray-500">${
+                                                  index + 1
+                                                }</div>
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap">
-                                                <div class="text-sm text-gray-500">${item.title}</div>
+                                                <div class="text-sm text-gray-500">${
+                                                  item.title
+                                                }</div>
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap">
-                                                <div class="text-sm text-gray-500">${item.description}</div>
+                                            <td class="px-6 py-4">
+                                                <div class="text-sm text-gray-500">${
+                                                  item.desc
+                                                }</div>
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap">
-                                            <img class="h-10 w-10 rounded-full" src="${item.img}" alt="">
+                                            <td class="">
+                                            <img class="h-15 w-15" src="${
+                                              item.img
+                                            }" alt="">
                                             </td>
                                             <td scope="col" class="relative px-6 py-3">
-                                                <a class=" rounded border py-2 px-3.5" href="/admin/news/${item.id}/edit">Edit</a>
+                                                <a class="bg-cyan-300 text-slate-100 rounded border py-2 px-3.5" href="/admin/news/${
+                                                  item.id
+                                                }/edit">Edit</a>
                                             </td>
                                             <td scope="col" class="relative px-6 py-3">
-                                                <a class=" rounded border py-2 px-3.5"  href="">Delete</a>
+                                                <button data-id=${
+                                                  item.id
+                                                } class="bg-red-600 text-slate-100 rounded border py-2 px-3.5" id='btn'>Delete</button>
                                             </td>
                                         </tr>
                                             `;
                                   })
-                                  .join()}
+                                  .join("")}
                             </tbody>
                             </table>
                         </div>
@@ -85,6 +99,23 @@ const News = {
         </div>
         </main>
     `;
+  },
+
+  afterRender() {
+    const btns = document.querySelectorAll("#btn");
+    btns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const confirm = window.confirm(
+          "Are you sure you want to delete this ?"
+        );
+        let id = btn.dataset["id"];
+
+        if (confirm) {
+          remove(id);
+        }
+      });
+    });
   },
 };
 
