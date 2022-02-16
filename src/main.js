@@ -17,7 +17,7 @@ import News from "./page/admin/news";
 import AddNews from "./page/admin/news/add";
 import EditNew from "./page/admin/news/edit";
 
-const router = new Navigo("/", { linksSelector: "a" });
+const router = new Navigo("/", { linksSelector: "a", hash:true });
 
 const print = async (content, id) => {
   document.getElementById("app").innerHTML = await content.render(id);

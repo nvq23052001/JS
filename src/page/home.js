@@ -73,6 +73,52 @@ const HomePage = {
                   </div>
                 </div>
               </section>
+              <section class="create">
+                <h3 class="create__heading mb-[18px] mt-[50px] uppercase text-[21px] tracking-wider flex justify-center text-[#5c5c5c]">Latest Creations</h3>
+                <div class="create__box grid grid-cols-2 gap-x-[2rem]">
+                  <div class="create__box-modal w-[100%]">
+                    <a href="" class="create__box-link inline-block group">
+                    <img src="https://cdn.shopify.com/s/files/1/0031/1699/0564/files/worth-and-worth-new-baseball-cap.jpg?v=1637358522" alt="" class="img__modal w-[100%]  group-hover:blur-[1px]" />
+                    </a>
+                  </div>
+
+                  <div class="create__detail">
+                    <a href="" className="detail__img-link">
+                    <img src="https://cdn.accentuate.io/6762775937106/7849030549604/Worth-and-Worth-Cashmere-Baseball-Heather-Grey-Side-Landing-v1636903120808.jpg?500x500" alt="" class="detail__img flex justify-center" />
+                    </a>
+                    <p class="create__name text-[28px] text-center">
+                      <a href="" class="create__name-link text-[#1d1d1d] leading-[38px] hover:text-[#717171] transition-all">
+                        Cashmere Baseball Cap - Heather Grey - W
+                      </a>
+                    </p>
+                    <p class="create__price text-center">
+                      $385.00
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="create__box grid grid-cols-2 gap-x-[2rem]">
+                  <div class="create__box-modal w-[100%]">
+                    <a href="" class="create__box-link inline-block group">
+                    <img src="https://cdn.shopify.com/s/files/1/0031/1699/0564/files/worth-and-worth-new-baseball-cap.jpg?v=1637358522" alt="" class="img__modal w-[100%]  group-hover:blur-[1px]" />
+                    </a>
+                  </div>
+
+                  <div class="create__detail">
+                    <a href="" className="detail__img-link">
+                    <img src="https://cdn.accentuate.io/6762775937106/7849030549604/Worth-and-Worth-Cashmere-Baseball-Heather-Grey-Side-Landing-v1636903120808.jpg?500x500" alt="" class="detail__img flex justify-center" />
+                    </a>
+                    <p class="create__name text-[28px] text-center">
+                      <a href="" class="create__name-link text-[#1d1d1d] leading-[38px] hover:text-[#717171] transition-all">
+                        Cashmere Baseball Cap - Heather Grey - W
+                      </a>
+                    </p>
+                    <p class="create__price text-center">
+                      $385.00
+                    </p>
+                  </div>
+                </div>
+              </section>
           </div>
       </div>
     </div>

@@ -11,6 +11,24 @@
     /* font-family: miller-display, serif; */
 }
 
+a {
+    overflow: hidden;
+}
+
+img {
+    
+    transition: all 0.8s ease-in-out;
+}
+
+.create__name-link {
+    font-family: miller-display, serif;
+}
+
+img:hover {
+    transform: scale(1.02);
+
+}
+
 .banner {
 
     background-image: linear-gradient(to right bottom,
@@ -47,5 +65,10 @@
 
 .home__name-link {
     font-family: miller-display, serif;
+
+}
+
+.create__box:nth-child(even) .create__detail {
+    
 
 }
