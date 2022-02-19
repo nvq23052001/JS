@@ -7,87 +7,121 @@
       "id": "1"
     },
     {
-      "title": "test",
-      "desc": "test 1",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/4/4a/The_Old_Fortress_and_the_Old_Town_of_Corfu_-_September_2017.jpg",
-      "id": "uFhECor"
-    },
-    {
-      "title": "test",
-      "desc": "test 1",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/4/4a/The_Old_Fortress_and_the_Old_Town_of_Corfu_-_September_2017.jpg",
-      "id": "ZpUsKfR"
-    },
-    {
-      "title": "test 2",
-      "desc": "ádasdasdsa",
-      "img": "http://res.cloudinary.com/nvquyet/image/upload/v1644223370/fl4ugluzyw7095e11rib.jpg",
-      "id": "DJ69nSZ"
+      "title": "a",
+      "desc": "a",
+      "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645028388/e0oldnekrhxfhouda8ih.png",
+      "id": "nn1PrDP"
     }
   ],
   "users": [
     {
-      "email": "nvquyet23052001@gmail.com",
-      "password": "$2a$10$D0N98wNfVkPhDppQxkGl5.ID.B/Vyh0JLKv0WWCJ3oHRTiEsflwc.",
-      "username": "quyet",
-      "id": 1
-    },
-    {
-      "email": "test@123.com",
-      "password": "$2a$10$7L0WU0ZRUkZYgzQQN6.Of.0nb2ApnHs7wcHhiOXuiI6Ll3E9ULxSu",
-      "username": "nv",
-      "id": 2
-    },
-    {
-      "email": "test1@gmail.com",
-      "password": "$2a$10$9VZskzDNR2Sav3ljXYa0lOS6TWPAll3AG68rxFEhlKNxg1qIq97/a",
-      "username": "quyet",
+      "email": "member9@gmail.com",
+      "password": "$2a$10$/R4K1pr8WFZcz6/oSAIG7uREWEx03n5bMY0y0JinZtwFsPJNr3MWy",
+      "username": "member9",
       "id": 3
     },
     {
-      "email": "member@gmail.com",
-      "password": "$2a$10$e1HXU.w92b1dI5oDM0N9KuaFiq/KWnUyjcYo3gK69R99JZxAegVO.",
-      "username": "quyetn",
+      "email": "member1@gmail.com",
+      "password": "$2a$10$vV/CMmY9sumQVLOULqqeFeyiVg11WyDwrNcht1x7fBqp0a1.TRNpC",
+      "username": "member1",
       "id": 4
     },
     {
-      "email": "member1@gmail.com",
-      "password": "$2a$10$Bb/Qcv7Qugd4KrIQw9fPTO6ro1E6rR85uyTGLg3CVsjBcjJYC48MK",
-      "username": "member",
-      "id": 5
+      "email": "admin@gmail.com",
+      "password": "$2a$10$DUZaFXnRGiOBnMrSDd96duiXBVG0yzDDa8We7m3Gpe3BPTZv7m1NK",
+      "username": "admin",
+      "id": 1
+    }
+  ],
+  "category": [
+    {
+      "type": "Women's Hat",
+      "desc": "In a society where things are mass-produced and instantly acquired, there is a little room for carefully crafted, handmade treasures.",
+      "img": "https://cdn.accentuate.io/94518673508/7853937590372/IKAT-WOMEN-v1637349209119.jpg?4128x2445",
+      "id": 1
     },
     {
-      "email": "member2@gmail.com",
-      "password": "$2a$10$MzuIoOSobBl6hy/8khrlg.VTXYdZrf/EhjBu4yNtI1RMrC5MLjB9G",
-      "username": "member1123",
-      "id": 6
+      "type": "Men's Hat",
+      "desc": "To Connect and value the objects you possess, we don’t need more. What we need are objects we care about, objects with soul and history, handmade with love.",
+      "img": "https://cdn.accentuate.io/94518575204/7853937590372/worth-and-worth-hats-men-2-v1637353192425.jpg?4128x2445",
+      "id": 2
+    },
+    {
+      "type": "All Hat",
+      "desc": "In a society where things are mass-produced and instantly acquired, there is a little room for carefully crafted, handmade treasures.",
+      "img": "https://cdn.accentuate.io/94518673508/7853937590372/IKAT-WOMEN-v1637349209119.jpg?4128x2445",
+      "id": 3
     }
   ],
   "products": [
     {
-      "name": "Cashmere Baseball Cap - Heather Grey - W",
-      "desc": "Quia ea officia sapiente quis. Nostrum sit omnis sed et enim. Occaecati distinctio possimus cupiditate consequatur. Illo occaecati dolorum et ex ut qui ipsum.\n \rUt ea cum eligendi. Sit laudantium dolore quia ut fuga quis. Alias occaecati incidunt at saepe a.\n \rVoluptatum eum culpa dolores adipisci. Incidunt consequuntur quo officia explicabo enim. Quis nobis repellendus aut. Et qui vel voluptas qui. Corrupti iusto dolorum sit magni ut occaecati sit. Quo ullam ut et suscipit consequuntur ut iste quibusdam saepe.",
-      "img": "https://cdn.accentuate.io/6762775937106/7849030549604/Worth-and-Worth-Cashmere-Baseball-Heather-Grey-Side-Landing-v1636903120808.jpg?500x500",
-      "img-modal": "https://cdn.shopify.com/s/files/1/0031/1699/0564/files/worth-and-worth-new-baseball-cap.jpg?v=1637358522",
-      "price": 3850000,
-      "id": "1"
+      "name": "Bucket Ice",
+      "desc": "Like a chip off an iceberg in Greenland...A white Italian cashmere hat with pink overtones and cool blue undertones. Made of 100% lustrous cashmere sits with a 3 1 semi-flat crown and a 2 brim, this bucket hat fully embodies casual chic. Not only comfy and easy but its elegant and worldly, the perfect accessory to cruise Madison or Flatbush Ave in mid-winter.",
+      "price": "650",
+      "categoryId": 2,
+      "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645107736/zzlzft7kodndoeexweig.jpg",
+      "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645107747/lo4x1ytne6fclqvp4q1y.jpg",
+      "id": 3
     },
     {
-      "name": "Cashmere Baseball Cap - Heather Grey - W",
-      "desc": "Quia ea officia sapiente quis. Nostrum sit omnis sed et enim. Occaecati distinctio possimus cupiditate consequatur. Illo occaecati dolorum et ex ut qui ipsum.\n \rUt ea cum eligendi. Sit laudantium dolore quia ut fuga quis. Alias occaecati incidunt at saepe a.\n \rVoluptatum eum culpa dolores adipisci. Incidunt consequuntur quo officia explicabo enim. Quis nobis repellendus aut. Et qui vel voluptas qui. Corrupti iusto dolorum sit magni ut occaecati sit. Quo ullam ut et suscipit consequuntur ut iste quibusdam saepe.",
-      "img": "https://cdn.accentuate.io/6762775937106/7849030549604/Worth-and-Worth-Cashmere-Baseball-Heather-Grey-Side-Landing-v1636903120808.jpg?500x500",
-      "img-modal": "https://cdn.shopify.com/s/files/1/0031/1699/0564/files/worth-and-worth-new-baseball-cap.jpg?v=1637358522",
-      "price": 3850000,
-      "id": "2"
+      "name": "Cashmere Baseball Cap",
+      "desc": "A refined and upgraded version of a timeless baseball cap for a modernized sportswear aesthetic. Crafted from 100% grey cashmere, this exquisite cashmere cap is constructed from six panels with a curved brim and is thoroughly made waterproof and wind-resistant. Ideal for leisure time teamed with casual outerwear. The perfect casual-luxe accessory for any ensemble.",
+      "price": "120",
+      "categoryId": 1,
+      "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645257865/vjgbmmqdwsbkcxgcy4pi.jpg",
+      "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645257870/iiodpbjpg4bwgrizxy0j.jpg",
+      "id": 4
     },
     {
-      "name": "Cashmere Baseball Cap - Heather Grey - W",
-      "desc": "Quia ea officia sapiente quis. Nostrum sit omnis sed et enim. Occaecati distinctio possimus cupiditate consequatur. Illo occaecati dolorum et ex ut qui ipsum.\n \rUt ea cum eligendi. Sit laudantium dolore quia ut fuga quis. Alias occaecati incidunt at saepe a.\n \rVoluptatum eum culpa dolores adipisci. Incidunt consequuntur quo officia explicabo enim. Quis nobis repellendus aut. Et qui vel voluptas qui. Corrupti iusto dolorum sit magni ut occaecati sit. Quo ullam ut et suscipit consequuntur ut iste quibusdam saepe.",
-      "img": "https://cdn.accentuate.io/6762775937106/7849030549604/Worth-and-Worth-Cashmere-Baseball-Heather-Grey-Side-Landing-v1636903120808.jpg?500x500",
-      "img-modal": "https://cdn.shopify.com/s/files/1/0031/1699/0564/files/worth-and-worth-new-baseball-cap.jpg?v=1637358522",
-      "price": 3850000,
-      "id": "3"
+      "name": "Vagabond",
+      "desc": "This is not a blue you will see every day… and if this blue had a voice it would sound like a mix between Kurt Cobain and Nina Simone. We created this piece to wear as it collapses on your head and forms whimsically when it is placed. Finished with our handwoven double-dipped Itajime dyed band. Easy to wear, nothing to think about",
+      "price": "750",
+      "categoryId": 1,
+      "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645280741/t0fmpc7tehnmo5q6nbv9.jpg",
+      "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645280745/lobgtowlhootonrfmm5w.jpg",
+      "id": 5
+    },
+    {
+      "name": "Vagabond",
+      "desc": "This is not a blue you will see every day… and if this blue had a voice it would sound like a mix between Kurt Cobain and Nina Simone. We created this piece to wear as it collapses on your head and forms whimsically when it is placed. Finished with our handwoven double-dipped Itajime dyed band. Easy to wear, nothing to think about.",
+      "price": "420",
+      "categoryId": 2,
+      "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645280870/ajjqzpb0l2ayhu58kg0z.jpg",
+      "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645280874/h6ngqlkuwcbjuswmwp9h.jpg",
+      "id": 6
+    },
+    {
+      "name": "Domo",
+      "desc": "100% Mustard Beaver Fur Felt triple dye with red overtones. An admirable amount of strength and durability. A real work horse, this Must-Have will last you a lifetime.",
+      "price": "920",
+      "categoryId": 2,
+      "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645280930/wnuoqxvtg2j50imrngbd.png",
+      "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645280935/uqotxeeoeyiv6awm8cjs.jpg",
+      "id": 7
     }
-    
+  ],
+  "pays": [
+    {
+      "name": "Bucket Ice",
+      "desc": "Like a chip off an iceberg in Greenland...A white Italian cashmere hat with pink overtones and cool blue undertones. Made of 100% lustrous cashmere sits with a 3 1 semi-flat crown and a 2 brim, this bucket hat fully embodies casual chic. Not only comfy and easy but its elegant and worldly, the perfect accessory to cruise Madison or Flatbush Ave in mid-winter.",
+      "price": "650",
+      "categoryId": 2,
+      "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645107736/zzlzft7kodndoeexweig.jpg",
+      "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645107747/lo4x1ytne6fclqvp4q1y.jpg",
+      "id": 3,
+      "quantity": 1,
+      "userId": 3
+    },
+    {
+      "name": "Cashmere Baseball Cap",
+      "desc": "A refined and upgraded version of a timeless baseball cap for a modernized sportswear aesthetic. Crafted from 100% grey cashmere, this exquisite cashmere cap is constructed from six panels with a curved brim and is thoroughly made waterproof and wind-resistant. Ideal for leisure time teamed with casual outerwear. The perfect casual-luxe accessory for any ensemble.",
+      "price": "120",
+      "categoryId": 1,
+      "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645257865/vjgbmmqdwsbkcxgcy4pi.jpg",
+      "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645257870/iiodpbjpg4bwgrizxy0j.jpg",
+      "id": 4,
+      "quantity": 1,
+      "userId": 4
+    }
   ]
 }

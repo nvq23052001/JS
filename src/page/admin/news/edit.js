@@ -84,7 +84,8 @@ const EditNew = {
   },
 
   afterRender(id) {
-    console.log(id);
+    HeaderAdmin.afterRender();
+    
     const form = document.querySelector("#form");
     form.addEventListener("submit", (e) => {
       e.preventDefault();

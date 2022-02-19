@@ -5,10 +5,11 @@ import "toastr/build/toastr.min.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Nav from "../components/nav";
+import Validator from '../utils/validator';
 
 const SignUp = {
   render() {
-    return `
+    return /* html*/`
     <div class=' max-w-7xl mx-auto text-sm'>
     ${Nav.render()} 
     <div class="bg-slate-100 min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -19,23 +20,24 @@ const SignUp = {
                   </h2>
                 </div>
                 <form id="form" class="mt-8 space-y-6" action="#" method="POST">
-                  <input type="hidden" name="remember" value="true">
                   <div class="rounded-md shadow-sm -space-y-px">
-                    <div class='pb-10'>
+                    <div class='form-group pb-10'>
                       <label for="user-name" class="sr-only">User name</label>
-                      <input id="user-name" name="email" type="text"class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="User name">
+                      <input id="user-name" rules="required" name="user-name" type="text"class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="User name">
+                      <span class="inline-block form-message text-red-500 mt-[5px]"></span>
                     </div>
 
-                    <div class='pb-10'>
+                    <div class='form-group pb-10'>
                       <label for="email-address" class="sr-only">Email address</label>
-                      <input id="email-address" name="email" type="email" autocomplete="email" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+                      <input id="email-address" rules="required|email" name="email" type="email" autocomplete="email" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+                      <span class="inline-block form-message text-red-500 mt-[5px]"></span>
                     </div>
                     
-                    <div class='pb-10'>
+                    <div class='form-group pb-10'>
                       <label for="password" class="sr-only">Password</label>
-                      <input id="password" name="password" type="password" autocomplete="current-password" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+                      <input id="password" rules="required|min:6" name="password" type="password" autocomplete="current-password" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+                      <span class="inline-block form-message text-red-500 mt-[5px]"></span></div>
                     </div>
-                  </div>
             
                   <div class="flex items-center justify-between">
                     <div class="flex items-center">
@@ -71,6 +73,7 @@ const SignUp = {
   },
 
   afterRender() {
+    Validator('#form');
     const formSignup = document.querySelector("#form");
 
     formSignup.addEventListener("submit", async (e) => {

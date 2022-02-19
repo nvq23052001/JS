@@ -27,6 +27,9 @@ const Dashboard = {
         </main>
     `;
   },
+  afterRender: function() {
+    HeaderAdmin.afterRender();
+  }
 };
 
 export default Dashboard;

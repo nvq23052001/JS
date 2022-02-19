@@ -12,10 +12,22 @@ import SignIn from "./page/signIn";
 import ProductsPage from "./page/products/index";
 import DetailProduct from "./page/products/detail";
 
+import CartPage from './page/cart';
+
 import DashBoard from "./page/admin/dashboard";
 import News from "./page/admin/news";
 import AddNews from "./page/admin/news/add";
 import EditNew from "./page/admin/news/edit";
+
+import ProductsAdmin from './page/admin/products';
+import AddProduct from "./page/admin/products/add";
+import EditProduct from "./page/admin/products/edit";
+
+import UsersAdmin from './page/admin/users';
+
+import OrderAdmin from "./page/admin/order";
+
+import Search from "./page/search";
 
 const router = new Navigo("/", { linksSelector: "a", hash:true });
 
@@ -56,19 +68,31 @@ router.on({
     const { id } = data;
     print(NewsDetail, id);
   },
-  "/products": () => {
-    print(ProductsPage);
+
+  "/products/:id": ({data}) => {
+    const {id} = data;
+    print(ProductsPage, id);
   },
   "/product/:id": ({ data }) => {
     const { id } = data;
     print(DetailProduct, id);
   },
+  "cart": ()=> {
+    print(CartPage);
+  },  
+
   "/signup": () => {
     print(SignUp);
   },
   "/signin": () => {
     print(SignIn);
   },
+
+  "/search/:key": ({data})=> {
+    const {key} = data;
+    print(Search, key);
+  },
+
   "/admin/dashboard": () => {
     print(DashBoard);
   },
@@ -81,6 +105,25 @@ router.on({
   "/admin/news/:id/edit": ({ data }) => {
     const { id } = data;
     print(EditNew, id);
+  },
+
+  "/admin/products": ()=> {
+    print(ProductsAdmin);
+  },
+  "admin/product/add": () => {
+    print(AddProduct);
+  },
+  "/admin/product/:id/edit": ({ data }) => {
+    const { id } = data;
+    print(EditProduct, id);
+  },
+
+  "/admin/users": () => {
+    print(UsersAdmin);
+  },
+
+  "/admin/order": () => {
+    print(OrderAdmin);
   },
 });
 

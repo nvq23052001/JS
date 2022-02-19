@@ -1,10 +1,24 @@
-import { getAll, remove } from "../../../api/post";
+import { getAll, remove } from "../../../api/products";
+import instance from "../../../api/instance";
 
 import HeaderAdmin from "../../../components/header_admin";
 import NavAdmin from "../../../components/nav_admin";
-const News = {
+import { reRender } from "../../../utils/rerender";
+const OrderAdmin = {
   async render() {
-    const { data } = await getAll();
+    const { data } = await instance.get('/pays?_expand=user');
+    console.log(data);
+
+    const truncate = (srt, n) => {
+        return srt?.length > n ? srt.substr(0, n - 1) + '...' : srt;
+    }
+
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+
+      });
+
     return /* html */ `
     ${HeaderAdmin.render()}
     <main class="app__admin shadow-xl bg-gray-800 flex flex-col md:flex-row">
@@ -15,10 +29,7 @@ const News = {
     
             <div class="bg-gray-800 pt-3">
                 <div class="flex items-center justify-between rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
-                    <h1 class="font-bold pl-2">NEWS</h1>
-                    <a href="/admin/news/add" class="btn bg-white-800 rounded border py-2 px-3.5">
-                        Add
-                    </a>
+                    <h1 class="font-bold pl-2 uppercase">Order</h1>
                 </div>
             </div>
                     <div class="w-full flex flex-col">
@@ -28,22 +39,28 @@ const News = {
                             <table class="min-w-full divide-y divide-gray-200">
                             <thead class="bg-gray-50">
                                 <tr>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">
                                     STT
                                 </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Title
+                                <th scope="col" class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">
+                                    Email user
                                 </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Description
+                                <th scope="col" class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">
+                                    Price
                                 </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">
+                                    Quantity
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">
+                                    Total price
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">
                                     Img
                                 </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 </th>
                                 </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 </th>
                                 </th>
                                 
@@ -52,34 +69,44 @@ const News = {
                             <tbody class="bg-white divide-y divide-gray-200">
                                 ${data
                                   .map((item, index) => {
-                                    return `
+                                    return /*html*/ `
                                         <tr>
-                                            <td class="px-6 py-4 whitespace-nowrap">
+                                            <td class="px-6 py-4 whitespace-nowrap text-center">
                                                 <div class="text-sm text-gray-500">${
                                                   index + 1
                                                 }</div>
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap">
                                                 <div class="text-sm text-gray-500">${
-                                                  item.title
+                                                  item.user.email
                                                 }</div>
                                             </td>
-                                            <td class="px-6 py-4">
+                                            <td class="px-6 py-4 whitespace-nowrap">
                                                 <div class="text-sm text-gray-500">${
-                                                  item.desc
+                                                  formatter.format(item.price)
+                                                }</div>
+                                            </td>
+                                            <td class="px-6 py-4 text-center">
+                                                <div class="text-sm text-gray-500">${
+                                                    item.quantity
                                                 }</div>
                                             </td>
                                             <td class="">
-                                            <img class="h-15 w-15" src="${
-                                              item.img
-                                            }" alt="">
+                                                <div class="text-sm text-gray-500 text-center">${
+                                                    formatter.format(item.quantity * item.price)
+                                                }</div>
                                             </td>
-                                            <td scope="col" class="relative px-6 py-3">
-                                                <a class="bg-cyan-300 text-slate-100 rounded border py-2 px-3.5" href="/admin/news/${
+                                            <td class="text-center">
+                                              <img class="h-[50%] w-[50%] mx-[auto] my-[0]" src="${
+                                                item.img
+                                              }" alt="">
+                                            </td>
+                                            <td scope="col" class="relative px-[10px] py-[5px]">
+                                                <a class="bg-cyan-300 text-slate-100 rounded border py-2 px-3.5" href="/admin/product/${
                                                   item.id
-                                                }/edit">Edit</a>
+                                                }/edit">Done</a>
                                             </td>
-                                            <td scope="col" class="relative px-6 py-3">
+                                            <td scope="col" class="relative px-[10px] py-[5px]">
                                                 <button data-id=${
                                                   item.id
                                                 } class="bg-red-600 text-slate-100 rounded border py-2 px-3.5" id='btn'>Delete</button>
@@ -103,9 +130,10 @@ const News = {
 
   afterRender() {
     HeaderAdmin.afterRender();
+
     const btns = document.querySelectorAll("#btn");
     btns.forEach((btn) => {
-      btn.addEventListener("click", (e) => {
+      btn.addEventListener("click", async (e)  => {
         e.preventDefault();
         const confirm = window.confirm(
           "Are you sure you want to delete this ?"
@@ -113,11 +141,12 @@ const News = {
         let id = btn.dataset["id"];
 
         if (confirm) {
-          remove(id);
+          await remove(id);
+          reRender(ProductsAdmin, '.app__admin')
         }
       });
     });
   },
 };
 
-export default News;
+export default OrderAdmin;

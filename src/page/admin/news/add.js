@@ -42,7 +42,7 @@ const AddNews = {
                             Image
                         </label>
                         <div class="mt-1 flex rounded-md shadow-sm">
-                            <input type="file" name="image" id="image" class="py-3 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Title">
+                            <input type="file" name="image" id="image" class="py-3 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Title" multiple>
                         </div>
                         </div>
                     </div>
@@ -73,16 +73,18 @@ const AddNews = {
   },
 
   afterRender() {
+    HeaderAdmin.afterRender();
     const btn = document.querySelector("#form");
     const imgPost = document.querySelector("#image");
 
     imgPost.addEventListener("change", async (e) => {
-      const file = e.target.files[0];
+      const file = e.target.files[0]; 
+      console.log(e.target.files);
 
       const formData = new FormData();
       formData.append("file", file);
       formData.append("upload_preset", "bov8hqvd");
-
+      console.log(formData);
       const { data } = await axios.post(
         "https://api.cloudinary.com/v1_1/nvquyet/image/upload",
         formData,
