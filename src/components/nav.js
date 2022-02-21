@@ -43,7 +43,7 @@ const Nav = {
       <div class="info px-[1rem] flex items-center absolute right-0 top-[50%] translate-y-[-50%] text-xs">
         ${
           localStorage.getItem("user")
-            ? `<p class="info__name px-[1rem] hover:translate-x-[5px] transition-all duration-300" id='user-name'>!</p>
+            ? `<a href="/#/profile"><p class="info__name px-[1rem] hover:translate-x-[5px] transition-all duration-300" id='user-name'>!</p></a>
         <p class="info__logout px-[1rem] hover:translate-x-[5px] transition-all duration-300 cursor-pointer" id='logout'>Logout</p>
         <a href="/#/cart" class="cart p-[10px] relative">
           <i class="fa-solid fa-cart-arrow-down text-[16px]"></i>

@@ -179,6 +179,9 @@ const EditProduct = {
                 imgModel: upImageModel?.url ? upImageModel?.url : data.imgModel,
               });
               toastr.success('Successfully!');
+              setTimeout(() => {
+                  document.location.href = "/#/admin/products";
+              }, 1000);
         
       });
     // form.addEventListener("submit", (e) => {

@@ -28,6 +28,7 @@ import UsersAdmin from './page/admin/users';
 import OrderAdmin from "./page/admin/order";
 
 import Search from "./page/search";
+import Profile from './page/profile';
 
 const router = new Navigo("/", { linksSelector: "a", hash:true });
 
@@ -91,6 +92,10 @@ router.on({
   "/search/:key": ({data})=> {
     const {key} = data;
     print(Search, key);
+  },
+
+  "/profile": ()=> {
+    print(Profile);
   },
 
   "/admin/dashboard": () => {

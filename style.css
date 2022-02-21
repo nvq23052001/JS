@@ -23,7 +23,9 @@ img {
 .create__name-link,
 .overview__title,
 .name,
-.result_detail {
+.result_detail,
+.user-detail,
+.you {
     font-family: miller-display, serif;
 }
 
@@ -147,4 +149,24 @@ img:hover {
     position: -webkit-sticky;
     position: sticky;
     top: 10px;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: minmax(min-content, max-content) 1fr;
+    column-gap: 60px;
+}
+
+.info_h3:after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: #000000;
+    margin-top: 13px;
+    min-width: 90px;
+}
+
+.you-box {
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }

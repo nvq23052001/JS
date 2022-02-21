@@ -86,7 +86,6 @@ const CartPage = {
         `
     },
     afterRender() {
-        Nav.afterRender();
 
         const btns = document.querySelectorAll('.btn');
         const pay = document.querySelector('#pay');
@@ -103,6 +102,7 @@ const CartPage = {
             })
         });
         pay.addEventListener('click',async ()=> {
+            console.log(JSON.parse(localStorage.getItem('cart')));
             try {
                 await instance.post('/pays', ...JSON.parse(localStorage.getItem('cart')));
                 console.log('thanh cong');

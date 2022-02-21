@@ -15,7 +15,7 @@ const Search = {
       const {data} = await instance.get(`/products?q=${key}`);
       console.log(data);
     return /* html */ `
-        <div class=""> 
+        <div class="min-h-[100vh]"> 
             <div id="header">
                 ${Nav.render()}
             </div>
@@ -28,7 +28,7 @@ const Search = {
                         <img src="https://cdn.shopify.com/s/files/1/0031/1699/0564/t/15/assets/sketch-border.png?v=7692273349260485024" alt="" />
                     </div>
                 </div>
-                <div class="grid grid-cols-3 gap-x-[3rem] h-[1000px]">
+                <div class="grid grid-cols-3 gap-x-[3rem]">
                     ${data.map(result=> `
                     <div class="product__box pt-[10px]">
                         <a href="" class="product__link">
@@ -45,8 +45,9 @@ const Search = {
                 
               </section>
             </div>
-            ${Footer.render()}
         </div>
+        ${Footer.render()}
+
         `;
   },
   afterRender() {

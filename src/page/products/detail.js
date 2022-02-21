@@ -2,6 +2,7 @@ import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 
 import Nav from "../../components/nav";
+import Footer from '../../components/footer';
 import { get, getAll } from "../../api/products";
 import { addToCart } from "../../utils/cart";
 import { reRender } from "../../utils/rerender";
@@ -34,24 +35,27 @@ const DetailProduct = {
                 </div>
                
               </section>
-              <section class="also mt-[20px]">
+              <section class="also mt-[20px] mb-[20px]">
                 <h3 class="tlt text-center text-[35px] text-[#5c5c5c]">You might also like</h3>
-                <div class="box grid grid-cols-4 gap-x-[7rem]">
-                  ${all.map((item)=> {
-                    return `
-                    <div class="product__box pt-[10px]">
-                      <a href="/#/product/${item.id}" class="product__link">
-                        <img src="${item.img}" alt="" class="img" />
-                        <div class="text flex flex-col">
-                        <span class="text-center text-[18px] text-[#2e2e2e] tracking-[2px]">${item.name}</span>
-                        <span class="price text-center tracking-[2px] text-[14px]">$${item.price}</span>
-                        </div>
-                      </a>
-                    </div>`
+                <div class="box grid grid-cols-4 gap-x-[3rem]">
+                  ${all.map((item, index)=> {
+                    if(index < 4) {
+                      return `
+                        <div class="product__box pt-[10px]">
+                          <a href="/#/product/${item.id}" class="product__link">
+                            <img src="${item.img}" alt="" class="img" />
+                            <div class="text flex flex-col">
+                            <span class="text-center text-[18px] text-[#2e2e2e] tracking-[2px]">${item.name}</span>
+                            <span class="price text-center tracking-[2px] text-[14px]">$${item.price}</span>
+                            </div>
+                          </a>
+                        </div>`
+                    }
                   }).join('')}
                 </div>
               </section>
             </div>
+            ${Footer.render()}
         </div>`;
   },
   afterRender(id) {

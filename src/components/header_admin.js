@@ -38,7 +38,6 @@ const HeaderAdmin = {
     const user = document.querySelector("#user-name");
     const logout = document.querySelector("#logout");
     if (user) {
-        console.log('a');
       user.innerHTML = `Hi, ${
         JSON.parse(localStorage.getItem("user")).username
       }`;
