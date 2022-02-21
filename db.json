@@ -100,28 +100,5 @@
       "id": 7
     }
   ],
-  "pays": [
-    {
-      "name": "Bucket Ice",
-      "desc": "Like a chip off an iceberg in Greenland...A white Italian cashmere hat with pink overtones and cool blue undertones. Made of 100% lustrous cashmere sits with a 3 1 semi-flat crown and a 2 brim, this bucket hat fully embodies casual chic. Not only comfy and easy but its elegant and worldly, the perfect accessory to cruise Madison or Flatbush Ave in mid-winter.",
-      "price": "650",
-      "categoryId": 2,
-      "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645107736/zzlzft7kodndoeexweig.jpg",
-      "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645107747/lo4x1ytne6fclqvp4q1y.jpg",
-      "id": 3,
-      "quantity": 1,
-      "userId": 3
-    },
-    {
-      "name": "Cashmere Baseball Cap",
-      "desc": "A refined and upgraded version of a timeless baseball cap for a modernized sportswear aesthetic. Crafted from 100% grey cashmere, this exquisite cashmere cap is constructed from six panels with a curved brim and is thoroughly made waterproof and wind-resistant. Ideal for leisure time teamed with casual outerwear. The perfect casual-luxe accessory for any ensemble.",
-      "price": "120",
-      "categoryId": 1,
-      "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645257865/vjgbmmqdwsbkcxgcy4pi.jpg",
-      "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645257870/iiodpbjpg4bwgrizxy0j.jpg",
-      "id": 4,
-      "quantity": 1,
-      "userId": 4
-    }
-  ]
+  "pays": []
 }
