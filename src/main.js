@@ -70,7 +70,7 @@ router.on({
     print(NewsDetail, id);
   },
 
-  "/products/:id": ({data}) => {
+  "/category/:id": ({data}) => {
     const {id} = data;
     print(ProductsPage, id);
   },

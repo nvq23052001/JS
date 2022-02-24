@@ -25,7 +25,7 @@ const HomePage = {
           </h2>
           <div class="banner__btn  mt-[20px] flex justify-center">
             <button class="btn btn-trans bg-white hover:bg-transparent hover:text-white transition-all outline-none mx-[10px]">
-              <a href="/#/products/3" class="banner__link">
+              <a href="/#/category/3" class="banner__link">
                 Shop now
               </a>
             </button>
@@ -44,7 +44,7 @@ const HomePage = {
                   <div class="home__text flex-[1_1_100%] flex flex-col justify-center">
                     <div class="text__wrapper">
                       <h3 class="home__name text-[40px] font-[100]">
-                        <a href="/#/products/1"  class='home__name-link text-[#383737] font-[100] hover:text-[#717171] transition-all duration-500'>
+                        <a href="/#/category/1"  class='home__name-link text-[#383737] font-[100] hover:text-[#717171] transition-all duration-500'>
                           Women's Hat
                         </a>
                       </h3>
@@ -52,7 +52,7 @@ const HomePage = {
                     </div>
                   </div>
                   <div class="home__img relative">
-                    <a href="/#/products/1" class="home__img-link group flex justify-end overflow-hidden w-[auto] h-[auto]">
+                    <a href="/#/category/1" class="home__img-link group flex justify-end overflow-hidden w-[auto] h-[auto]">
                       <img src="https://cdn.shopify.com/s/files/1/0031/1699/0564/files/SHOP-WOMEN-Worth-and-Worth-Blue-ash-2-photo.jpg?v=1607482944" alt="" class="home__bg  group-hover:scale-[1.02] group-hover:blur-[1px] transition-all duration-700" />
                     </a>
                     <div class="bg-[url('https://cdn.shopify.com/s/files/1/0031/1699/0564/files/texture_indigo-worth-and-worth.jpg?v=1607483089')] w-[40%] h-[85%] absolute top-[-5%] left-[-3%] z-[-5]">
@@ -64,11 +64,11 @@ const HomePage = {
                   <div class="home__text flex-[1_1_100%] flex flex-col justify-center">
                     <div class="text__wrapper ml-[auto]">
                       <h3 class="home__name text-[40px] font-[100]">
-                        <a href="/#/products/2"  class='home__name-link text-[#383737] font-[100] hover:text-[#717171] transition-all duration-500'>
+                        <a href="/#/category/2"  class='home__name-link text-[#383737] font-[100] hover:text-[#717171] transition-all duration-500'>
                           Men's Hat
                         </a>
                       </h3>
-                      <a href="/#/products/2" class="home__text-link font-[300] text-[20px] text-[#2e2e2e] border-b  border-[#2e2e2e] hover:translate-x-3 hover:text-[#717171] transition-all duration-500 cursor-pointer">Shop</a>
+                      <a href="/#/category/2" class="home__text-link font-[300] text-[20px] text-[#2e2e2e] border-b  border-[#2e2e2e] hover:translate-x-3 hover:text-[#717171] transition-all duration-500 cursor-pointer">Shop</a>
                     </div>
                   </div>
                   <div class="home__img relative">

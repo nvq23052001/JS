@@ -1,8 +1,10 @@
 import { add } from "../../../api/products";
 import axios from "axios";
+import Validator from '../../../utils/validator';
 
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
+
 
 import HeaderAdmin from "../../../components/header_admin";
 import NavAdmin from "../../../components/nav_admin";

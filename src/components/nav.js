@@ -16,12 +16,12 @@ const Nav = {
       <nav class="nav sticky top-0">
       <ul class="header__list transition-all h-[70px] bg-white flex items-center justify-center sticky top-0">
         <li class="header__item mx-[30px]">
-          <a href="/#/products/3" class="header__link uppercase">
+          <a href="/#/category/3" class="header__link uppercase">
             Shop
           </a>
         </li>
         <li class="header__item mx-[30px]">
-          <a href="/#/products/1" class="header__link uppercase">
+          <a href="/#/category/1" class="header__link uppercase">
             Shop women's
           </a>
         </li>
@@ -29,7 +29,7 @@ const Nav = {
             <img src="../../img/logo-small.png" alt="" class="header__img w-[60px] h-[46px] object-cover " />
           </a>
         <li class="header__item mx-[30px] uppercase">
-          <a href="/#/products/2" class="header__link">
+          <a href="/#/category/2" class="header__link">
               Shop Men's
           </a>
         </li>

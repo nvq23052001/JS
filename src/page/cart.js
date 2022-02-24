@@ -2,6 +2,10 @@ import {increaseQuantity, decreaseQuantity, deleteProduct} from '../utils/cart';
 import {reRender} from '../utils/rerender';
 import instance from '../api/instance';
 
+
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
+
 import Nav from '../components/nav';
 const CartPage = {
     formatter : new Intl.NumberFormat('en-US', {
@@ -12,12 +16,11 @@ const CartPage = {
     render() {
         let cart = [];
         let userId = JSON.parse(localStorage.getItem('user')).id;
-
         if(localStorage.getItem('cart')) {
             const carts =  JSON.parse(localStorage.getItem('cart'));
             cart = carts.filter(cart=> cart.userId === userId);
-            console.log(cart);
         }
+
         return /*html*/ `
         <div class="flex justify-center mb-[20px]">
             <a href="/">
@@ -102,12 +105,26 @@ const CartPage = {
             })
         });
         pay.addEventListener('click',async ()=> {
-            console.log(JSON.parse(localStorage.getItem('cart')));
+            let userId = JSON.parse(localStorage.getItem('user')).id;
+            const times = new Date();
+            let time = `${times.getDay()}-${times.getDate()}-${times.getFullYear()}`;
+            let carts = JSON.parse(localStorage.getItem('cart'))
+            carts.map(cart=> {
+                return cart['date'] = time;
+            })
+            console.log(carts);
+            const total = {
+                userId: userId,
+                products: [...carts]
+
+            }
+            console.log(total);
             try {
-                await instance.post('/pays', ...JSON.parse(localStorage.getItem('cart')));
-                console.log('thanh cong');
+                await instance.post('/pays', total);
+                toastr.success('Pay successfully!');
+                localStorage.removeItem('cart');
             } catch (error) {
-                
+                toastr.error("Error");
             }
         })
     }

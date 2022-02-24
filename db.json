@@ -57,48 +57,103 @@
     {
       "name": "Bucket Ice 1",
       "desc": "Like a chip off an iceberg in Greenland...A white Italian cashmere hat with pink overtones and cool blue undertones. Made of 100% lustrous cashmere sits with a 3 1 semi-flat crown and a 2 brim, this bucket hat fully embodies casual chic. Not only comfy and easy but its elegant and worldly, the perfect accessory to cruise Madison or Flatbush Ave in mid-winter.",
-      "price": "650",
+      "price": 650,
       "categoryId": 2,
       "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645107736/zzlzft7kodndoeexweig.jpg",
       "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645107747/lo4x1ytne6fclqvp4q1y.jpg",
+      "color": "gray",
       "id": 3
     },
     {
       "name": "Cashmere Baseball Cap",
       "desc": "A refined and upgraded version of a timeless baseball cap for a modernized sportswear aesthetic. Crafted from 100% grey cashmere, this exquisite cashmere cap is constructed from six panels with a curved brim and is thoroughly made waterproof and wind-resistant. Ideal for leisure time teamed with casual outerwear. The perfect casual-luxe accessory for any ensemble.",
-      "price": "120",
+      "price": 120,
       "categoryId": 1,
       "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645257865/vjgbmmqdwsbkcxgcy4pi.jpg",
       "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645257870/iiodpbjpg4bwgrizxy0j.jpg",
+      "color": "gray",
       "id": 4
     },
     {
       "name": "Vagabond",
       "desc": "This is not a blue you will see every day… and if this blue had a voice it would sound like a mix between Kurt Cobain and Nina Simone. We created this piece to wear as it collapses on your head and forms whimsically when it is placed. Finished with our handwoven double-dipped Itajime dyed band. Easy to wear, nothing to think about",
-      "price": "750",
+      "price": 750,
       "categoryId": 1,
       "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645280741/t0fmpc7tehnmo5q6nbv9.jpg",
       "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645280745/lobgtowlhootonrfmm5w.jpg",
+      "color": "brown",
       "id": 5
     },
     {
       "name": "Vagabond",
       "desc": "This is not a blue you will see every day… and if this blue had a voice it would sound like a mix between Kurt Cobain and Nina Simone. We created this piece to wear as it collapses on your head and forms whimsically when it is placed. Finished with our handwoven double-dipped Itajime dyed band. Easy to wear, nothing to think about.",
-      "price": "420",
+      "price": 420,
       "categoryId": 2,
       "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645280870/ajjqzpb0l2ayhu58kg0z.jpg",
       "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645280874/h6ngqlkuwcbjuswmwp9h.jpg",
+      "color": "green",
       "id": 6
     },
     {
       "name": "Domo",
       "desc": "100% Mustard Beaver Fur Felt triple dye with red overtones. An admirable amount of strength and durability. A real work horse, this Must-Have will last you a lifetime.",
-      "price": "920",
+      "price": 920,
       "categoryId": 2,
       "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645280930/wnuoqxvtg2j50imrngbd.png",
       "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645280935/uqotxeeoeyiv6awm8cjs.jpg",
+      "color": "brown",
       "id": 7
     }
   ],
-  "pays": []
+  "pays": [
+    {
+      "userId": 1,
+      "products": [
+        {
+          "name": "Cashmere Baseball Cap",
+          "desc": "A refined and upgraded version of a timeless baseball cap for a modernized sportswear aesthetic. Crafted from 100% grey cashmere, this exquisite cashmere cap is constructed from six panels with a curved brim and is thoroughly made waterproof and wind-resistant. Ideal for leisure time teamed with casual outerwear. The perfect casual-luxe accessory for any ensemble.",
+          "price": 120,
+          "categoryId": 1,
+          "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645257865/vjgbmmqdwsbkcxgcy4pi.jpg",
+          "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645257870/iiodpbjpg4bwgrizxy0j.jpg",
+          "id": 4,
+          "quantity": 3,
+          "userId": 1,
+          "date": "2-22-2022"
+        },
+        {
+          "name": "Vagabond",
+          "desc": "This is not a blue you will see every day… and if this blue had a voice it would sound like a mix between Kurt Cobain and Nina Simone. We created this piece to wear as it collapses on your head and forms whimsically when it is placed. Finished with our handwoven double-dipped Itajime dyed band. Easy to wear, nothing to think about",
+          "price": 750,
+          "categoryId": 1,
+          "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645280741/t0fmpc7tehnmo5q6nbv9.jpg",
+          "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645280745/lobgtowlhootonrfmm5w.jpg",
+          "id": 5,
+          "quantity": 2,
+          "userId": 1,
+          "date": "2-22-2022"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "products": [
+        {
+          "name": "Vagabond",
+          "desc": "This is not a blue you will see every day… and if this blue had a voice it would sound like a mix between Kurt Cobain and Nina Simone. We created this piece to wear as it collapses on your head and forms whimsically when it is placed. Finished with our handwoven double-dipped Itajime dyed band. Easy to wear, nothing to think about.",
+          "price": 420,
+          "categoryId": 2,
+          "img": "http://res.cloudinary.com/nvquyet/image/upload/v1645280870/ajjqzpb0l2ayhu58kg0z.jpg",
+          "imgModel": "http://res.cloudinary.com/nvquyet/image/upload/v1645280874/h6ngqlkuwcbjuswmwp9h.jpg",
+          "color": "green",
+          "id": 6,
+          "quantity": 1,
+          "userId": 1,
+          "date": "3-23-2022"
+        }
+      ],
+      "id": 2
+    }
+  ]
 }
